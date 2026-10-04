@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum/pert2/pertemuan2.dart';
+import 'package:praktikum/pert3/Pertemuan3.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(Pertemuan2App());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => BelanjaModel(),
+      child: const MyApp(),
+    ),
+  );
 }
