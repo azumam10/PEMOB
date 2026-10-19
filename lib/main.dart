@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:praktikum/pert4/halaman_postingan.dart';
+import 'pert5/PengaturanPage.dart';
+import 'pert5/test_db.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await jalankanTest();
   runApp(const MyApp());
 }
 
@@ -11,9 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Praktikum 4',
-      theme: ThemeData(colorSchemeSeed: Colors.blue, useMaterial3: true),
-      home: const HalamanPostingan(),
+      title: 'Praktikum 5',
+      home: const PengaturanPage(),
     );
   }
 }
